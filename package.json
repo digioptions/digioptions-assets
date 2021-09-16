@@ -1,0 +1,25 @@
+{
+  "name": "digioptions-assets",
+  "version": "0.0.1",
+  "description": "Common base assets like graphics, logos and favicons for building web apps",
+  "type": "module",
+  "homepage": "https://github.com/digioptions/digioptions-assets",
+  "license": "All rights reserved.",
+  "author": {
+    "name": "Ulf Bartel",
+    "email": "elastic.code@gmail.com"
+  },
+  "scripts": {},
+  "files": [
+    "assets",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digioptions/digioptions-assets.git"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {}
+}
