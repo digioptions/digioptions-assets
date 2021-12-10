@@ -1,6 +1,6 @@
 {
   "name": "digioptions-assets",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Common base assets like graphics, logos and favicons for building web apps",
   "type": "module",
   "homepage": "https://github.com/digioptions/digioptions-assets",
@@ -9,9 +9,15 @@
     "name": "Ulf Bartel",
     "email": "elastic.code@gmail.com"
   },
-  "scripts": {},
+  "scripts": {
+    "eslint": "eslint *.cjs js/*.js"
+  },
   "files": [
-    "assets",
+    "css",
+    "favicon",
+    "icons",
+    "img",
+    "js",
     "LICENSE",
     "README.md"
   ],
@@ -21,5 +27,13 @@
   },
   "keywords": [],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "~7.16.0",
+    "@babel/eslint-parser": "~7.16.3",
+    "@babel/plugin-transform-runtime": "~7.16.0",
+    "@babel/preset-env": "~7.16.0",
+    "@babel/preset-react": "~7.16.0",
+    "eslint": "^8.4.0",
+    "eslint-plugin-react": "^7.23.0"
+  }
 }
