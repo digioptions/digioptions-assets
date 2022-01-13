@@ -4,6 +4,7 @@
 import React from 'react';
 
 class DigioptionsLogo extends React.PureComponent {
+
   render(){
     const {colorIcon, color0, color1, marginTopFact, marginBottomFact, logoText, subTitle, ...rest} = this.props;
     // * custom fillc colors
@@ -43,6 +44,7 @@ class DigioptionsLogo extends React.PureComponent {
     );
   }
 }
+
 DigioptionsLogo.defaultProps = {
   colorIcon: '#05497a', /* color-digioptions0 */
   color0: '#05497a', /* color-digioptions0 */
@@ -50,7 +52,7 @@ DigioptionsLogo.defaultProps = {
   marginTopFact: 0,
   marginBottomFact: 0,
   logoText: true,
-  subTitle: false
+  subTitle: false,
 };
 
 export {

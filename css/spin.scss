@@ -1,0 +1,11 @@
+// vim: sts=2:ts=2:sw=2
+
+/* spin animation in css because ie11 does not support animateTransform */
+.spin {
+  animation: 1s rotate linear infinite;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}

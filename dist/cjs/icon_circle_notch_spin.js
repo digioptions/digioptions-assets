@@ -18,17 +18,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IconCircleNotchSpin = void 0;
 const react_1 = __importDefault(require("react"));
-/* this is the only icon with default stroke color #666666 */
-/* since animateTransform does not work with ie11 we added a css3 animation '.spin' */
 class IconCircleNotchSpin extends react_1.default.PureComponent {
     render() {
         const _a = this.props, { stroke } = _a, rest = __rest(_a, ["stroke"]);
         return (<svg xmlns="http://www.w3.org/2000/svg" className="spin" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" {...rest}>
-        <circle stroke={stroke} cx="50" cy="50" fill="none" strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138">
-        </circle>
+        <circle stroke={stroke} cx="50" cy="50" fill="none" strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138"/>
       </svg>);
     }
 }
 exports.IconCircleNotchSpin = IconCircleNotchSpin;
-// <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
-IconCircleNotchSpin.defaultProps = { stroke: '#666666' };
+IconCircleNotchSpin.defaultProps = {
+    stroke: '#666666',
+};

@@ -63,5 +63,5 @@ DigioptionsLogo.defaultProps = {
     marginTopFact: 0,
     marginBottomFact: 0,
     logoText: true,
-    subTitle: false
+    subTitle: false,
 };
