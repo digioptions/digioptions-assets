@@ -1,0 +1,56 @@
+/***/
+/* logo animation on landing page */
+/***/
+// TODO class
+#logoAnimation {
+  max-width: 400px;
+  width: '80%';
+}
+
+#logoAnimation .logoMain {
+animation: animLogoMain 6s;
+}
+
+#logoAnimation .logoSub {
+animation: animLogoSub 6s;
+}
+
+@keyframes animLogoMain {
+  0% { 
+    transform: translateY(20px);
+    opacity: 0; // fade in
+  }
+  30% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animLogoSub {
+  0% { 
+    transform: translateY(40px);
+  }
+  30% {
+    transform: translateY(40px);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+  100% {
+  }
+}
