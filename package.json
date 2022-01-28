@@ -10,7 +10,7 @@
     "email": "elastic.code@gmail.com"
   },
   "scripts": {
-    "build": "rm -rf dist/cjs/* dist/mjs/* && tsc -p tsconfig-mjs.json && tsc -p tsconfig-cjs.json",
+    "build": "rm -rf dist/cjs dist/cjs-react /dist/mjs dist/mjs-react && tsc -p tsconfig-mjs.json && tsc -p tsconfig-mjs-react.json && tsc -p tsconfig-cjs.json && tsc -p tsconfig-cjs-react.json",
     "eslint": "eslint *.cjs src/*.js"
   },
   "files": [
