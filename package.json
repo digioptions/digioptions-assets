@@ -10,7 +10,7 @@
     "email": "elastic.code@gmail.com"
   },
   "scripts": {
-    "build": "rm -rf dist/cjs dist/cjs-react /dist/mjs dist/mjs-react && tsc -p tsconfig-mjs.json && tsc -p tsconfig-mjs-react.json && tsc -p tsconfig-cjs.json && tsc -p tsconfig-cjs-react.json",
+    "build": "rm -rf dist/cjs dist/cjs-react dist/mjs dist/mjs-react && tsc -p tsconfig-mjs.json && tsc -p tsconfig-mjs-react.json && tsc -p tsconfig-cjs.json && tsc -p tsconfig-cjs-react.json",
     "eslint": "eslint *.cjs src/*.js tools/*.js"
   },
   "files": [
@@ -29,11 +29,11 @@
   "keywords": [],
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "~7.16.0",
-    "@babel/eslint-parser": "~7.16.3",
-    "@babel/plugin-transform-runtime": "~7.16.0",
-    "@babel/preset-env": "~7.16.0",
-    "@babel/preset-react": "~7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "@types/node": "^17.0.8",
     "eslint": "^8.4.0",
     "eslint-plugin-react": "^7.23.0",
