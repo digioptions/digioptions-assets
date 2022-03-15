@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "rm -rf dist/cjs dist/cjs-react dist/mjs dist/mjs-react && tsc -p tsconfig-mjs.json && tsc -p tsconfig-mjs-react.json && tsc -p tsconfig-cjs.json && tsc -p tsconfig-cjs-react.json",
-    "eslint": "eslint *.cjs src/*.js tools/*.js"
+    "eslint": "eslint *.cjs src/*.js tools/*.js",
+    "watch-mjs": "tsc -p tsconfig-mjs.json --watch"
   },
   "files": [
     "css",
