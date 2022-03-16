@@ -30,3 +30,4 @@ exports.IconCircleNotchSpin = IconCircleNotchSpin;
 IconCircleNotchSpin.defaultProps = {
     stroke: '#666666',
 };
+//# sourceMappingURL=icon_circle_notch_spin.js.map

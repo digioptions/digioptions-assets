@@ -65,3 +65,4 @@ DigioptionsLogo.defaultProps = {
     logoText: true,
     subTitle: false,
 };
+//# sourceMappingURL=digioptions_logo.js.map

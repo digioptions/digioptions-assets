@@ -48,3 +48,4 @@ DigioptionsLogo.defaultProps = {
     subTitle: false,
 };
 export { DigioptionsLogo, };
+//# sourceMappingURL=digioptions_logo.js.map

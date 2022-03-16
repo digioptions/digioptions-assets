@@ -17,3 +17,4 @@ Loading.defaultProps = {
     fill: '#666666'
 };
 export { Loading, };
+//# sourceMappingURL=loading.js.map
