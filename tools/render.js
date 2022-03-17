@@ -31,7 +31,7 @@ function svg_component_write(component, props, fname){
 async function svg_component_write_png(component, props, fname, imageprops){
   const buf = Buffer.from(svg_component_render(component, props));
 
-  console.log(imageprops);
+  console.log(fname, imageprops);
   let img = await sharp(
     buf,
     {density: 800} // TODO might be huge
