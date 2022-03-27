@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DigioptionsSpinnerProgressBox = exports.DigioptionsSpinner = void 0;
+exports.DigioptionsSpinnerProgressBox = exports.DigioptionsProgressBar = exports.DigioptionsSpinner = void 0;
 const react_1 = __importDefault(require("react"));
 const ProgressBar_js_1 = __importDefault(require("react-bootstrap/esm/ProgressBar.js")); // TODO maybe get rid of react-bootstrap/bootstrap dependency?
 class DigioptionsSpinner extends react_1.default.PureComponent {
@@ -24,10 +24,10 @@ class DigioptionsSpinner extends react_1.default.PureComponent {
         super(...arguments);
         this.render = function () {
             const _a = this.props, { stroke, fill, fillOpacity, strokeWidth } = _a, rest = __rest(_a, ["stroke", "fill", "fillOpacity", "strokeWidth"]);
-            return (react_1.default.createElement("svg", Object.assign({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 228.206 228.206" }, rest),
+            return (react_1.default.createElement("svg", Object.assign({ className: "digioptions-spinner", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 228.206 228.206" }, rest),
                 react_1.default.createElement("circle", { style: { marker: 'none' }, strokeWidth: strokeWidth, cy: "114.103", cx: "114.103", r: "114.103", fill: `rgb(${fill})`, fillOpacity: fillOpacity, fillRule: "nonzero" }),
                 react_1.default.createElement("g", { clipPath: "path('M93.127 170.313c.153.061.303.116.454.17 31.118 11.327 65.576-4.74 76.902-35.86 11.326-31.117-4.742-65.576-35.86-76.902-31.118-11.326-65.577 4.744-76.903 35.86l-27.355 75.161c-16.573-25.457-21.41-58.127-10.232-88.84C39.01 28.038 96.443 1.257 148.304 20.133c51.866 18.877 78.643 76.31 59.767 128.17-18.876 51.862-76.305 78.645-128.17 59.767-13.542-4.928-25.376-12.486-35.133-21.89l16.14-44.344.011.014 14.772-40.585c.114-.342.23-.677.353-1.015 7.59-20.852 30.568-31.692 51.452-24.367z')" },
-                    react_1.default.createElement("circle", { style: { marker: 'none' }, strokeWidth: strokeWidth, cy: "114.103", cx: "114.103", r: "114.103", fill: '#ffffff', fillOpacity: 0.5, fillRule: "nonzero" }),
+                    react_1.default.createElement("circle", { style: { marker: 'none' }, cy: "114.103", cx: "114.103", r: "114.103", fill: stroke, fillOpacity: 0.0, fillRule: "nonzero" }),
                     react_1.default.createElement("path", { strokeDasharray: "750", fill: "none", stroke: stroke, strokeLinejoin: "miter", strokeWidth: "60", d: "M136.103 106.009c-8.884-8.875-18.529-10.888-27.433-10.32-8.904.569-18.195 13.99-23.09 21.494-11.845 18.156-17.796 37.846-16.318 51.073 1.477 13.227 6.77 23.001 20.729 27.347 32.943 10.258 69.893 1.776 90.64-24.04 16.473-20.5 18.886-55.117 10.483-78.252-5.042-13.882-13.975-26.511-26.105-35.808C125.571 27.276 69.984 36.332 41.5 75.465c-18.904 25.97-27.451 65.878-26.552 100.058" },
                         react_1.default.createElement("animate", { attributeName: "stroke-dashoffset", begin: "0.0s", values: "-750;750", dur: "3s", calcMode: "linear", repeatCount: "indefinite" })))));
         };
@@ -40,9 +40,9 @@ DigioptionsSpinner.defaultProps = {
     fillOpacity: 0.15,
     strokeWidth: 0, // circle
 };
-class DigioptionsSpinnerProgressBox extends react_1.default.PureComponent {
+class DigioptionsProgressBar extends react_1.default.PureComponent {
     render() {
-        const { progress } = this.props;
+        const { progress, style } = this.props;
         const percent = Math.max(Math.min(Math.round(progress * 95 + 5), 100), 0);
         let label;
         if (percent >= 20) {
@@ -54,20 +54,41 @@ class DigioptionsSpinnerProgressBox extends react_1.default.PureComponent {
         else {
             label = '';
         }
-        return (react_1.default.createElement("div", { style: Object.assign({ width: '120px', margin: 'auto' }, this.props.style) },
-            react_1.default.createElement(DigioptionsSpinner, { width: '60%' }),
-            react_1.default.createElement("div", { style: { backgroundColor: `rgba(${this.props.fill}, ${this.props.fillOpacity})`, borderRadius: '5px', padding: '5px', marginTop: '5px',
-                } },
-                react_1.default.createElement(ProgressBar_js_1.default, { style: { backgroundColor: '#e3f0f9' }, now: percent, label: label }))));
+        const styleFinal = Object.assign({}, {
+            backgroundColor: `rgba(${this.props.fill}, ${this.props.fillOpacity})`,
+            borderRadius: '5px',
+            padding: '5px',
+        }, style);
+        return (react_1.default.createElement("div", { style: styleFinal },
+            react_1.default.createElement(ProgressBar_js_1.default, { style: { backgroundColor: '#e3f0f9' }, now: percent, label: label })));
+    }
+}
+exports.DigioptionsProgressBar = DigioptionsProgressBar;
+DigioptionsProgressBar.defaultProps = {
+    fill: '128, 128, 128',
+    fillOpacity: 0.15,
+    style: {},
+    //  width: 'auto',
+};
+class DigioptionsSpinnerProgressBox extends react_1.default.PureComponent {
+    render() {
+        const _a = this.props, { className, style } = _a, rest = __rest(_a, ["className", "style"]);
+        //    return (
+        //      <div className={className} style={Object.assign({width: '120px', margin: 'auto'}, style)}>
+        //        <DigioptionsSpinner width='60%'/>
+        //        <DigioptionsProgressBar {...rest} />
+        //      </div>
+        //    );
+        return (react_1.default.createElement("div", { className: className, style: Object.assign({ margin: 'auto', maxWidth: 200 }, style) },
+            react_1.default.createElement("div", { style: { display: 'flex', alignItems: 'center' } },
+                react_1.default.createElement(DigioptionsSpinner, { width: '60px' }),
+                react_1.default.createElement(DigioptionsProgressBar, Object.assign({ style: { flexGrow: 1, marginLeft: 10 } }, rest)))));
     }
 }
 exports.DigioptionsSpinnerProgressBox = DigioptionsSpinnerProgressBox;
 //dc_blue_background
 DigioptionsSpinnerProgressBox.defaultProps = {
-    // for DigioptionsSpinner
-    stroke: '#05497a',
     fill: '128, 128, 128',
-    fillOpacity: 0.15,
-    strokeWidth: 0, // circle
+    fillOpacity: 0.15, // circle
 };
 //# sourceMappingURL=digioptions_spinner.js.map
