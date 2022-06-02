@@ -2,6 +2,8 @@
 /* eslint-env es6 */
 
 import React from 'react';
+import ProgressBar from 'react-bootstrap/esm/ProgressBar.js'; // TODO maybe get rid of react-bootstrap/bootstrap dependency?
+import {DigioptionsSpinner} from './digioptions_spinner.js';
 
 class DigioptionsProgressBar extends React.PureComponent {
   render(){
