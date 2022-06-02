@@ -3,10 +3,10 @@
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-import ReactDOMServer from 'react-dom/server.js';
+import ReactDOMServer from 'react-dom/server';
 import sharp from 'sharp';
 
-//import {DigioptionsSpinner} from '../dist/mjs-react/digioptions_spinner.js';
+import {DigioptionsSpinner, DigioptionsLogoAnim} from '../dist/mjs-react/digioptions_spinner.js';
 import {DigioptionsLogo} from '../dist/mjs-react/digioptions_logo.js';
 
 function mkdir(dir){
@@ -52,13 +52,13 @@ mkdir('svg');
 mkdir('bitmap');
 
 // animated spinner (only svg)
-//svg_component_write(DigioptionsSpinner, {}, path.join('svg', 'digioptions_spinner.svg'));
+svg_component_write(DigioptionsSpinner, {}, path.join('svg', 'digioptions_spinner.svg'));
+svg_component_write(DigioptionsLogoAnim, {}, path.join('svg', 'digioptions_logo_anim.svg'));
 
 svg_component_write(DigioptionsLogo, {}, path.join('svg', 'digioptions_logo.svg'));
 svg_component_write(DigioptionsLogo, {subTitle: true}, path.join('svg', 'digioptions_logofull.svg'));
 svg_component_write(DigioptionsLogo, {logoText: false}, path.join('svg', 'digioptions_icon-nocircle.svg'));
 
-//svg_component_write(DigioptionsSpinner, {}, 'digioptions_logo-icon-circle.svg');
 
 for (let [size, imageprops] of [
   ['xl', {resize: 1600}],
