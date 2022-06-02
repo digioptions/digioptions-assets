@@ -9,28 +9,21 @@ export namespace DigioptionsSpinner {
         const strokeWidth: number;
     }
 }
-export class DigioptionsProgressBar {
-    render(): any;
+export class DigioptionsLogoAnim {
+    render: () => any;
 }
-export namespace DigioptionsProgressBar {
+export namespace DigioptionsLogoAnim {
     export namespace defaultProps_1 {
+        const stroke_1: string;
+        export { stroke_1 as stroke };
         const fill_1: string;
         export { fill_1 as fill };
         const fillOpacity_1: number;
         export { fillOpacity_1 as fillOpacity };
-        export const style: {};
+        const strokeWidth_1: number;
+        export { strokeWidth_1 as strokeWidth };
+        export const color0: string;
+        export const color1: string;
     }
     export { defaultProps_1 as defaultProps };
-}
-export class DigioptionsSpinnerProgressBox {
-    render(): any;
-}
-export namespace DigioptionsSpinnerProgressBox {
-    export namespace defaultProps_2 {
-        const fill_2: string;
-        export { fill_2 as fill };
-        const fillOpacity_2: number;
-        export { fillOpacity_2 as fillOpacity };
-    }
-    export { defaultProps_2 as defaultProps };
 }
